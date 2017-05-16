@@ -1,0 +1,87 @@
+1.6 Equivalence Exercises
+=========================
+
+1. 𝜆xy.xz
+b) 𝜆mn.mz Due to alpha equivalence
+
+2. 𝜆xy.xxy
+c) 𝜆z(𝜆b.aab) As multiple arguments in the head is syntactic sugar for the exanded form
+
+3. 𝜆xyz.zx
+   = 𝜆xz.zx Because y is unused in the body
+   b) 𝜆tos.st is equivalent because it equals 𝜆ts.st which is alpha equivalent
+
+
+1.11 Chapter Exercises
+======================
+
+Combinators:
+1. 𝜆x.xxx - Combinator
+2. 𝜆xy.zx - Not a combinator (z is free)
+3. 𝜆xyz.xy(zx) - Combinator
+4. 𝜆xyz.xy(zxy) - Combinator
+5. 𝜆xy.xy(zxy) - Not a combinator (z is free)
+
+Normal form or diverge?
+1. 𝜆x.xxx - NF
+2. (𝜆z.zz)(𝜆y.yy) - Diverge
+3. (𝜆x.xxx)z - Can be reduced to NF zzz
+
+Beta reduce:
+1. (𝜆abc.cba)zz(𝜆wv.w)
+=> (𝜆a.𝜆b.𝜆c.cba)zz(𝜆w.𝜆v.w)
+=> (𝜆b.𝜆c.cbz)z(𝜆w.𝜆v.w)
+=> (𝜆c.czz)(𝜆w.𝜆v.w)
+=> (𝜆w.𝜆v.w)zz
+=> (𝜆v.z)z
+=> z
+
+2. (𝜆x.𝜆y.xyy)(𝜆a.a)b
+=> (𝜆y(𝜆a.a)yy)b
+=> (𝜆y.yy)b
+=> bb
+
+3. (𝜆y.y)(𝜆x.xx)(𝜆z.zq)
+=> (𝜆x.xx)(𝜆z.zq)
+=> (𝜆z.zq)(𝜆z.zq)
+=> (𝜆z.zq)q
+=> qq
+
+What if we apply from the right first?
+=> Same result
+
+4. (𝜆z.z)(𝜆z.zz)(𝜆z.zy)
+=> (𝜆z.z)(𝜆z1.z1z1)(𝜆z2.z2y)
+=> (𝜆z1.z1z1)(𝜆z2.z2y)
+=> (𝜆z2.z2y)(𝜆z2.z2y)
+=> (𝜆z2.z2y)y
+=> yy
+
+5. (𝜆x.𝜆y.xyy)(𝜆y.y)y
+=> (𝜆x.𝜆y.xyy)(𝜆y1.y1)y
+=> (𝜆y.(𝜆y1.y1)yy)y
+=> (𝜆y1.y1)yy
+=> yy
+
+6. (𝜆a.aa)(𝜆b.ba)c
+Do from the right this time:
+=> (𝜆a.aa)ca => cca which is incorrect.
+
+Do from the left:
+=> (𝜆b.ba)(𝜆b.ba)c
+=> (𝜆b.ba)ac
+=> aac
+
+Which is the correct answer. So must have to work from left to right.
+
+7. (𝜆xyz.xz(yz))(𝜆x.z)(𝜆x.a)
+=> (𝜆x.𝜆y.𝜆z.xz(yz))(𝜆x.z)(𝜆x.a)
+=> (𝜆y.𝜆z1.(𝜆x.z)z1(yz1))(𝜆x.a)
+=> (𝜆z1.(𝜆x.z)z1((𝜆x.a)z1))
+=> (𝜆z1.z((𝜆x.a)z1))
+=> (𝜆z1.za)
+=> (𝜆y.za)
+
+
+
+
