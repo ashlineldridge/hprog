@@ -1,0 +1,58 @@
+2.5 Exercises: Comprehension Check
+==================================
+
+1. let half x = x / 2
+   let square x = x * x
+
+2. let areaCircle r = 3.14 * r * r
+
+3. let areaCircle r = pi * r * r
+
+
+2.7 Exercises: Heal the Sick
+============================
+
+1. let area x = 3.14 * (x * x)
+2. let double x = x * 2
+3. x = 7
+   y = 10
+   f = x + y
+
+
+2.10 Exercises: A Head Code
+===========================
+
+1. 5? Yes
+2. 25? Yes
+3. 30? Yes
+4. 6? Yes
+
+
+2.11 Chapter Exercises
+======================
+
+Parenthesization:
+1. 2 + (2 * 3) - 1
+2. (^) 10 $ (1 + 1)
+3. (2 ^ 2) * (4 ^ 5) + 1
+
+Equivalent Expressions:
+1. Yes
+2. Yes
+3. No
+4. No
+5. No
+
+More fun with functions:
+
+let z = 7
+let y = z + 8
+let x = y ^ 2
+let waxOn = x * 5
+-- waxOn == 1125
+
+1.
+
+
+
+
