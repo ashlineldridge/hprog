@@ -1,0 +1,38 @@
+3.4 Exercises: Scope
+====================
+
+1. Yes
+2. No
+3. No
+4. Yes
+
+
+3.8 Chapter Exercises
+=====================
+
+Reading syntax:
+1. a) Correct
+   b) Incorrect - should be: (++) [1, 2, 3] [4, 5, 6]
+   c) Correct
+   d) Incorrect - should be: "hello" ++ " world"
+   e) Incorrect - should be: "hello" !! 4
+   f) Correct
+   g) Incorrect - should be: take 4 "lovely"
+   h) Correct
+
+2. a) d
+   b) c
+   c) e
+   d) a
+   e) b
+
+Building functions:
+1. a) "Curry is awesome" ++ "!"
+   b) take 1 (drop 4 "Curry is awesome!")
+   c) drop 9 "Curry is awesome!"
+
+2. See stringFuncs.hs
+3. See stringFuncs.hs
+4. See stringFuncs.hs
+5. See stringFuncs.hs
+6. See reverse.hs
